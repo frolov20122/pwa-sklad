@@ -1,10 +1,10 @@
 const CACHE = 'sklad-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icon-192.png',
-  '/icon-512.png'
+  '/pwa-sklad/',
+  '/pwa-sklad/index.html',
+  '/pwa-sklad/manifest.json',
+  '/pwa-sklad/icon-192.png',
+  '/pwa-sklad/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
