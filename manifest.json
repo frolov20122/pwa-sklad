@@ -2,7 +2,7 @@
   "name": "Складской учёт РУСЭНЕРГО",
   "short_name": "Склад",
   "description": "Учёт расходных материалов",
-  "start_url": "/index.html",
+  "start_url": "https://frolov20122.github.io/index.html",
   "display": "standalone",
   "theme_color": "#27ae60",
   "background_color": "#f0f2f5",
