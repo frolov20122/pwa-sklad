@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Склад">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="theme-color" content="#27ae60">
+  <title>Складской учёт</title>
+  <style>
+    body { margin:0; padding:0; background:#f0f2f5; overflow:hidden; height:100vh; }
+    iframe { width:100%; height:100vh; border:none; display:block; }
+  </style>
+</head>
+<body>
+  <!-- ВСТАВЬТЕ ВАШ URL APPS SCRIPT ВНИЗУ -->
+  <iframe src="https://script.google.com/macros/s/AKfycbxJrBpCt_uWPJ3yaWbXcG1QRYxUE8m6m0JvQ4IcZ9-RWYOE5r82ZfiKI_7fLOH9qaId/exec"></iframe>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
