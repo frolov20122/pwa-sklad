@@ -1,4 +1,4 @@
-const CACHE = 'sklad-cache-v1';
+const CACHE = 'sklad-cache-v3';
 const urlsToCache = [
   '/pwa-sklad/',
   '/pwa-sklad/index.html',
