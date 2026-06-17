@@ -1,4 +1,4 @@
-const CACHE = 'sklad-cache-v3';
+const CACHE = 'sklad-cache-v' + new Date().toISOString().slice(0,10);
 const urlsToCache = [
   '/pwa-sklad/',
   '/pwa-sklad/index.html',
