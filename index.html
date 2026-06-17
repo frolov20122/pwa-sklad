@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
   
+  <!-- Отключаем кэширование страницы -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
   <!-- Подключение манифеста -->
   <link rel="manifest" href="/pwa-sklad/manifest.json">
   
@@ -19,7 +24,6 @@
   <title>Складской учёт</title>
   
   <style>
-    /* Сброс отступов */
     * { margin:0; padding:0; box-sizing:border-box; }
     html, body {
       width: 100%;
@@ -32,19 +36,23 @@
       width: 100%;
       height: 100%;
       border: none;
-      /* Для iOS: убираем возможные отступы */
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
     }
-    /* Если на телефоне адресная строка перекрывает, это решит viewport-fit=cover */
   </style>
 </head>
 <body>
-  <!-- ВСТАВЬТЕ ВАШ URL APPS SCRIPT -->
-  <iframe src="https://script.google.com/macros/s/AKfycbwGDOpBvAcAomKirmk09YZ_ACKYAYFm-mgFFxGIuus4f8CYrH7iwoFCIcj_ienqdPCRfQ/exec"></iframe>
+  <script>
+    // Добавляем параметр ?nocache с меткой времени, чтобы избежать кэширования iframe
+    var appsScriptUrl = 'https://script.google.com/macros/s/AKfycbwGDOpBvAcAomKirmk09YZ_ACKYAYFm-mgFFxGIuus4f8CYrH7iwoFCIcj_ienqdPCRfQ/exec';
+    var iframe = document.createElement('iframe');
+    iframe.src = appsScriptUrl + '?nocache=' + Date.now();
+    iframe.style.cssText = 'display:block; width:100%; height:100%; border:none; position:fixed; top:0; left:0; right:0; bottom:0;';
+    document.body.appendChild(iframe);
+  </script>
   
   <script>
     // Регистрация service worker для офлайн-режима
